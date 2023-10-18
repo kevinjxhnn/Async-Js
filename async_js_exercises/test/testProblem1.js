@@ -5,10 +5,8 @@ const {
   createJSONFilesPart2,
   deleteJSONFilesPart2,
   createJSONFilesPart3,
-  deleteJSONFilesPart3, 
-  
+  deleteJSONFilesPart3,
 } = require("../problem1");
-
 
 async function runningProblem1() {
   try {
@@ -24,8 +22,8 @@ async function runningProblem1() {
 
     // Part 2
     await new Promise(async (resolve) => {
-       createDirectory("part2", () => {
-         createJSONFilesPart2().then(() => {
+      createDirectory("part2", () => {
+        createJSONFilesPart2().then(() => {
           deleteJSONFilesPart2().then(() => {
             resolve();
           });
@@ -48,9 +46,6 @@ async function runningProblem1() {
   } catch (err) {
     console.error("Error running the program:", err);
   }
-
 }
 
 runningProblem1();
-
-
